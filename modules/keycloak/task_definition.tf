@@ -26,16 +26,14 @@ resource "aws_ecs_task_definition" "keycloak" {
       { name = "KC_DB_PASSWORD", value = var.db_password },
       { name = "KEYCLOAK_ADMIN", value = "admin" },
       { name = "KEYCLOAK_ADMIN_PASSWORD", value = "admin" },
+      { name = "KC_LOG_LEVEL", value = "DEBUG" },
 
-      { name = "KEYCLOAK_HOSTNAME", value = "keycloak.${var.load_balancer_domain}" },  # Coloque o domínio público aqui
-      { name = "KEYCLOAK_FRONTEND_URL", value = "https://keycloak.${var.load_balancer_domain}" },  # A URL pública acessível via LB
-      { name = "KC_HOSTNAME_ADMIN_URL", value = "https://keycloak.${var.load_balancer_domain}" },  # A URL pública acessível via LB
-      { name = "KC_HOSTNAME_URL", value = "https://keycloak.${var.load_balancer_domain}" },  # A URL pública acessível via LB
+      { name = "KC_HOSTNAME", value = "keycloak.${var.load_balancer_domain}" },  # Coloque o domínio público aqui
       { name = "KC_HOSTNAME_STRICT", value = "false" },  # A URL pública acessível via LB
       { name = "KC_IMPORT", value = "/opt/keycloak/data/import" },  # A URL pública acessível via LB
 
       # Caso esteja usando um proxy reverso (Load Balancer):
-      { name = "KEYCLOAK_PROXY", value = "edge" }
+      { name = "KC_PROXY", value = "edge" }
     ]
     logConfiguration = {
       logDriver = "awslogs"
