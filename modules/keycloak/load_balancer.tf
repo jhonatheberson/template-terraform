@@ -4,6 +4,10 @@ resource "aws_lb" "keycloak" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.keycloak.id]
   subnets            = var.subnets
+
+  depends_on = [
+    aws_security_group.keycloak
+  ]
 }
 
 resource "aws_lb_target_group" "keycloak" {
