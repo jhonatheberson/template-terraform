@@ -70,3 +70,30 @@ In addition to the AWS VPC Solution Pattern, the  Template project follows a ser
 ## Tech Stack
 - [Terraform (Opentofu)](https://opentofu.org/)
 - [AWS Cli](https://aws.amazon.com/pt/cli/)
+
+
+
+## How to contribute
+
+1. Fork the project.
+2. Create a new branch with your changes: `git checkout -b my-feature`
+3. Save your changes and create a commit message telling you what you did: `git commit -m" feature: My new feature "`
+4. Submit your changes: `git push origin my-feature`
+   > If you have any questions check this [guide on how to contribute](./CONTRIBUTING.md)
+
+---
+
+## Author
+
+<a href="https://github.com/jhonatheberson">
+ <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/42505240?s=460&u=20d12ba68e5b22a99167d26cb85d28815599d08c&v=4" width="100px;" alt="Jhonat Heberson"/>
+ <br />
+ <sub><b>Jhonat Heberson</b></sub></a> <a href="https://github.com/jhonatheberson" title="Github"></a>
+ <br />
+
+[![Linkedin Badge](https://img.shields.io/badge/-Jhonat-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jhonat-heberson-64816616a/)](https://www.linkedin.com/in/jhonat-heberson-64816616a/)
+[![Gmail Badge](https://img.shields.io/badge/-jhonatheberson@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jhonatheberson@gmail.com)](mailto:jhonatheberson@gmail.com)
+
+## License
+
+This project is under the license [MIT](./LICENSE).
