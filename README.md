@@ -4,7 +4,7 @@
 </h1>
 
 <h3 align="center">
-    This Terraform code implements the AWS architecture for the  Template project, based on the <a href="https://dev.azure.com/neuaieng/AKL-2023-001-23001-MonitoramentoDeAtivos/_git/doc?version=GBmaster&path=/02.Analise/arquitetura/AKL-2023-001-23001-SFT-001-ArquiteturaSistema.docx">Architecture Documentation</a>. It utilizes the <a href="https://aws.amazon.com/solutions/implementations/vpc/">AWS VPC Solution</a> Pattern and follows a serverless approach.
+    This Terraform code implements the AWS architecture for the  Template project, based on the <a href="https://dev.azure.com/templateeng/AKL-2023-001-23001-MonitoramentoDeAtivos/_git/doc?version=GBmaster&path=/02.Analise/arquitetura/AKL-2023-001-23001-SFT-001-ArquiteturaSistema.docx">Architecture Documentation</a>. It utilizes the <a href="https://aws.amazon.com/solutions/implementations/vpc/">AWS VPC Solution</a> Pattern and follows a serverless approach.
 </h3>
 
 </p>
@@ -55,10 +55,10 @@ In addition to the AWS VPC Solution Pattern, the  Template project follows a ser
 1. Inside the location of repository create file `ENVIRONMENT_NAME.tfvars` with example content:
     ```
     environment = "ENVIRONMENT_NAME"
-    project_alias = "neuai-project-alias"
-    project_code = "neuai-project-code"
-    project_cost_center = "neuai-cost-center"
-    project_pep = "neuai-pep"
+    project_alias = "template-project-alias"
+    project_code = "template-project-code"
+    project_cost_center = "template-cost-center"
+    project_pep = "template-pep"
     region = "us-east-1"
     dns_zone_name = "your-domain"
     initial_db_name = "INITIAL_DB_NAME"
@@ -66,6 +66,8 @@ In addition to the AWS VPC Solution Pattern, the  Template project follows a ser
     master_password = "MASTER_DB_PASSWORD"
     ```
 1. run: `tofu init -backend-config=./ENVIRONMENT_NAME.s3.tfbackend`
+1. run: `tofu validate -var-file ENVIRONMENT_NAME.tfvars`
+1. run: `tofu plan -var-file ENVIRONMENT_NAME.tfvars`
 1. run: `tofu apply -var-file ENVIRONMENT_NAME.tfvars`
 ## Tech Stack
 - [Terraform (Opentofu)](https://opentofu.org/)

@@ -180,7 +180,7 @@ output "keycloak_service_url" {
 #   DB_DATABASE  = var.initial_db_name  # Nome do banco de dados no Aurora
 #   DB_USER      = var.master_username  # Usuário do banco de dados
 #   DB_PASSWORD  = var.master_password  # Senha do banco de dados
-#   KC_HOSTNAME  = "keycloak-keycloak-example.ms.sandbox.neuai.com.br"  # Defina o hostname correto aqui
+#   KC_HOSTNAME  = "keycloak-keycloak-example.ms.sandbox.template.com.br"  # Defina o hostname correto aqui
 #   KEYCLOAK_PROXY = "edge" # Configuração para proxy reverso (como ALB)
 #   KEYCLOAK_ADMIN = "admin"
 #   KEYCLOAK_ADMIN_PASSWORD = "admin"
