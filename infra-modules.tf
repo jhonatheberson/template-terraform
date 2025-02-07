@@ -118,6 +118,28 @@ output "keycloak_service_url" {
   value = module.keycloak_deploy.keycloak_url  # URL do serviço Keycloak
 }
 
+output "keycloak_security_group_id" {
+  value = module.keycloak_deploy.keycloak_security_group_id
+}
+
+output "keycloak_aws_ecs_task_definition_name" {
+  value = module.keycloak_deploy.aws_ecs_task_definition_name
+}
+
+output "keycloak_aws_ecs_service_name" {
+  value = module.keycloak_deploy.aws_ecs_service_name
+}
+
+output "keycloak_aws_ecs_cluster_name" {
+  value = module.keycloak_deploy.aws_ecs_cluster_name
+}
+
+output "keycloak_aws_ecr_repository_name" {
+  value = module.keycloak_deploy.aws_ecr_repository_name
+}
+
+
+
 
 # module "ecs_cluster" {
 #   source         = "./modules/ecs_cluster"
