@@ -12,7 +12,7 @@ resource "aws_lb" "keycloak" {
 
 resource "aws_lb_target_group" "keycloak" {
   name        = "keycloak-tg"
-  port        = var.container_port
+  port        = "80"
   protocol    = "HTTP"
   vpc_id      = var.vpc_id
   target_type = "ip"
@@ -23,6 +23,7 @@ resource "aws_lb_target_group" "keycloak" {
     timeout             = 5
     healthy_threshold   = 2
     unhealthy_threshold = 2
+    matcher             = "200-302"
   }
 }
 

@@ -25,5 +25,5 @@ resource "aws_iam_policy" "ecs_cloudwatch_logs" {
 
 resource "aws_iam_role_policy_attachment" "ecs_cloudwatch_logs_attach" {
   policy_arn = aws_iam_policy.ecs_cloudwatch_logs.arn
-  role       = aws_iam_role.ecs_task_execution.name
+  role       = data.aws_iam_role.ecs_task_execution.name
 }

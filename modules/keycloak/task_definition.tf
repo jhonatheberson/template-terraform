@@ -4,7 +4,7 @@ resource "aws_ecs_task_definition" "keycloak" {
   cpu                      = "512"
   memory                   = "1024"
   network_mode             = "awsvpc"
-  execution_role_arn       = aws_iam_role.ecs_task_execution.arn
+  execution_role_arn       = data.aws_iam_role.ecs_task_execution.arn
 
   container_definitions = jsonencode([{
     name      = "keycloak"
