@@ -3,6 +3,9 @@
 # }
 
 
+data "aws_route53_zone" "zone" {
+  name = var.dns_zone_name
+}
 
 output "nameserver" {
   value = data.aws_route53_zone.zone.name_servers
